@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MCU_RaspberryPi_RP2350")(type "KiCad")(uri "${KIPRJMOD}/RP2350 Libraries/MCU_RaspberryPi_RP2350.kicad_sym")(options "")(descr ""))
+  (lib (name "ProLib_pcs_2024-10-14")(type "EasyEDA (JLCEDA) Pro")(uri "${KIPRJMOD}/OPL_Kicad_Library/Seeed Studio Wio Series/Wio-SX1262/ProLib_pcs_2024-10-14.elibz")(options "")(descr ""))
+)
