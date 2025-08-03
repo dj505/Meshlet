@@ -58,7 +58,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "hole_clearance|126868600|61461500|1af4de94-604e-4e9d-a65d-533434077282|2ebfb5e5-f0e3-4876-a0ea-a96b7e2df28c",
+          ""
+        ],
+        [
+          "hole_clearance|126868600|61461500|1af4de94-604e-4e9d-a65d-533434077282|a0e6d6a5-0453-43d1-8d37-12e0eab5912e",
+          ""
+        ],
+        [
+          "hole_clearance|132668600|61461500|e76c31aa-2fa4-4a89-9a57-35f90defe0e1|099f3695-f5d5-4f46-80c1-ee102ac4e1f8",
+          ""
+        ],
+        [
+          "hole_clearance|132668600|61461500|e76c31aa-2fa4-4a89-9a57-35f90defe0e1|bb18e8a7-422a-4861-9f11-a946fde5b71a",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -567,6 +584,18 @@
         },
         {
           "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
           "show": true
@@ -584,22 +613,10 @@
           "show": true
         },
         {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
-        },
-        {
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "LCSC",
-          "name": "LCSC",
-          "show": false
         },
         {
           "group_by": false,

@@ -3,4 +3,6 @@
   (lib (name "RP2350 Components")(type "KiCad")(uri "${KIPRJMOD}/RP2350 Libraries/RP2350 Components.pretty")(options "")(descr ""))
   (lib (name "RP2350_60QFN_minimal")(type "KiCad")(uri "${KIPRJMOD}/RP2350 Libraries/RP2350_60QFN_minimal.pretty")(options "")(descr ""))
   (lib (name "Wio-SX1262")(type "KiCad")(uri "${KIPRJMOD}/Wio-SX1262.pretty")(options "")(descr ""))
+  (lib (name "Graphics")(type "KiCad")(uri "${KIPRJMOD}/Graphics.pretty")(options "")(descr ""))
+  (lib (name "RM2")(type "KiCad")(uri "${KIPRJMOD}/RM2/RM2.pretty")(options "")(descr ""))
 )
