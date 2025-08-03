@@ -20210,7 +20210,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C20789"
+		(property "LCSC" "C69679"
 			(at 53.34 148.59 0)
 			(effects
 				(font
@@ -24218,7 +24218,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 257.81 35.56 180)
+		(at 257.81 33.02 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24234,7 +24235,7 @@
 			)
 		)
 		(property "Value" "Batt. Header (Picoblade 1.25)"
-			(at 257.81 29.21 0)
+			(at 257.81 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24243,7 +24244,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal"
-			(at 257.81 35.56 0)
+			(at 257.81 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24252,7 +24253,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 257.81 35.56 0)
+			(at 257.81 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24261,7 +24262,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 257.81 35.56 0)
+			(at 257.81 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24270,7 +24271,7 @@
 			)
 		)
 		(property "LCSC" "C177225"
-			(at 257.81 35.56 0)
+			(at 257.81 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
