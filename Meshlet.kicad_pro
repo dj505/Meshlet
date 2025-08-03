@@ -74,6 +74,10 @@
         [
           "hole_clearance|132668600|61461500|e76c31aa-2fa4-4a89-9a57-35f90defe0e1|bb18e8a7-422a-4861-9f11-a946fde5b71a",
           ""
+        ],
+        [
+          "missing_courtyard|126031952|67868800|f5e9c295-6356-4a7c-9468-71c61a9ecd7e|00000000-0000-0000-0000-000000000000",
+          ""
         ]
       ],
       "meta": {
@@ -118,7 +122,7 @@
         "pth_inside_courtyard": "warning",
         "shorting_items": "error",
         "silk_edge_clearance": "ignore",
-        "silk_over_copper": "warning",
+        "silk_over_copper": "ignore",
         "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
