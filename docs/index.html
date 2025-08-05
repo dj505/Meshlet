@@ -76,25 +76,25 @@
                     </ul>
                 </span>
             </div>
-        </div>
 
-        <div>
-            <h2 class="body-header">Usage Notes</h2>
-            <span class="body-text">
-                <p>
-                    There are a few things I think you should keep in mind when using Meshlet:
-                </p>
-                <ul>
-                    <li><strong>THE BQ24074 ONLY SUPPORTS 1 BATTERY CELL. THERE ARE TWO BATTERY CONNECTORS. DO NOT USE BOTH AT ONCE.</strong> thank u :)</li>
-                    <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>Changing this to 1A may require you to replace fuse F1</strong> with a more suitable part/</li>
-                    <li>You have the option to attach an 0402 SMD 10k thermistor. This will cut off charging above certain temperatures. It may also be influenced by the temperature of the BQ24074, as it's quite close to it; my bad. It's probably negligible though! Better safe than sorry for outdoor nodes.</li>
-                    <li>The solar charging is based on the BQ24074's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels, anything too far above 6V will just be dissipated as heat!</li>
-                    <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself off sunlight.</li>
-                    <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). It's still pretty new, and I haven't yet tested it with this board.</li>
-                    <li>GPS switching is <em>half supported.</em> The EN pin is present, and can be configured, however it won't actually do anything unless you have a GPS module that can handle it natively, or an extra board with the right MOSFET arrangement to act as a middleman.</li>
-                    <li>The power switch is bypassed by default. You will need to cut jumper JP6 to disable the bypass if you want to add one. <strong>The power switch will only toggle the output of the BQ24074 and will <strong>NOT</strong> disable battery charging!</strong></li>
-                </ul>
-            </span>
+            <div>
+                <h2 class="body-header">Usage Notes</h2>
+                <span class="body-text">
+                    <p>
+                        There are a few things I think you should keep in mind when using Meshlet:
+                    </p>
+                    <ul>
+                        <li><strong>THE BQ24074 ONLY SUPPORTS 1 BATTERY CELL. THERE ARE TWO BATTERY CONNECTORS. DO NOT USE BOTH AT ONCE.</strong> thank u :)</li>
+                        <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>Changing this to 1A may require you to replace fuse F1</strong> with a more suitable part/</li>
+                        <li>You have the option to attach an 0402 SMD 10k thermistor. This will cut off charging above certain temperatures. It may also be influenced by the temperature of the BQ24074, as it's quite close to it; my bad. It's probably negligible though! Better safe than sorry for outdoor nodes.</li>
+                        <li>The solar charging is based on the BQ24074's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels, anything too far above 6V will just be dissipated as heat!</li>
+                        <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself off sunlight.</li>
+                        <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). It's still pretty new, and I haven't yet tested it with this board.</li>
+                        <li>GPS switching is <em>half supported.</em> The EN pin is present, and can be configured, however it won't actually do anything unless you have a GPS module that can handle it natively, or an extra board with the right MOSFET arrangement to act as a middleman.</li>
+                        <li>The power switch is bypassed by default. You will need to cut jumper JP6 to disable the bypass if you want to add one. <strong>The power switch will only toggle the output of the BQ24074 and will <strong>NOT</strong> disable battery charging!</strong></li>
+                    </ul>
+                </span>
+            </div>
         </div>
 
         <footer>
