@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Meslhet | 5panel.dance</title>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+        <link type="text/css" rel="stylesheet" href="/stylesheets/labels.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+        <meta property="og:title" content="Meshlet" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://5panel.dance" />
+        <meta property="og:image" content="https://dj505.github.io/assets/logo.jpg" />
+        <meta property="og:description" content="A Compact & Versatile RP2350 Mesh Network Node" />
+        <meta name="theme-color" content="#61afef" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+        <script type="text/javascript" src="/script/incl-html.js"></script>
+    </head>
+
+    <body>
+        <div class="back-to-top">
+            Quick Index<br/><br/>
+            <a href="#top">Back to Top</a><br/>
+            <a href="#what-is">What is it?</a><br/>
+            <a href="#use-notes">Usage Notes</a><br/>
+        </div>
+
+        <div class="content" id="top">
+            <a href="https://5panel.dance">
+                <h1 align="center" class="topper-h1">5panel.dance</h1>
+            </a>
+            <h2 align="center">↙️↖️⏺️↗️↘️</h2>
+
+            <p align="center"><a href="https://github.com/dj505">GitHub</a> • <a href="https://youtube.com/dj505itg">YouTube</a> • <a href="https://bsky.app/profile/5panel.dance">BlueSky</a> • <a href="https://discord.com/invite/ctMByBy">Discord</a> • <a href="https://ko-fi.com/dj505piu">Ko-Fi</a></p>
+
+            <br/>
+
+            <div class="info">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Info
+                </h2>
+                <dl>
+                    <dt>Meshlet is a work in progress!</dt>
+                    <dd>This board is currently untested, and will be until I can afford to order a test batch.</dd>
+                </dl>
+            </div>
+
+            <br/>
+
+            <div id="what-is">
+                <h2 class="body-header">What is it?</h2>
+                <span class="body-text">
+                    <p>
+                        Meshlet is a LoRa mesh network node, designed to be compatible with the <em>Meshtastic®</em> project.
+                        It's made to be deployed just about anywhere you want it to be - you can plug in a solar panel and set it up outside, turn it into a pocketable every-day-carry node, wire it up to your car as a mobile repeater, or even just leave it on a windowsill attached to a BBS script/Meshsense/etc.
+                    </p>
+                    <p>
+                        Features include, but are not limited to...
+                    </p>
+                    <ul>
+                        <li>USB C, with configurable charge rate limit (500mA or 1A)</li>
+                        <li>ESD protection on USB D+/-</li>
+                        <li>Solar input, as well as constant DC input, up to 10V safe</li>
+                        <li>JST 2.0 and Picoblade 1.5mm battery connectors to fit whatever MakerFocus LiPos you've got laying around</li>
+                        <li>GPS module header</li>
+                        <li>Up to 8MB onboard flash</li>
+                        <li>SWD port compatible with the official Raspberry Pi Pico Debug Probe</li>
+                        <li>Active current/voltage monitoring and reporting on the USB power line, external DC/solar input, and regulated 3.3V supply via INA3221</li>
+                        <li>WIO-SX1262 LoRa radio</li>
+                        <li>BME280 temperature/humidity/barometric pressure sensor</li>
+                        <li>I2C expansion port compatible with the Adafruit STEMMA QT standard</li>
+                        <li>Self-resetting fuse</li>
+                        <li>"External notification" header for a MOSFET-driven 3.3V buzzer, LED, vibration motor, etc</li>
+                        <li>Raspberry Pi RM2 for optional WiFi & Bluetooth</li>
+                        <li>Total footprint size of ~60*40mm, smaller than a credit card!</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="body-header">Usage Notes</h2>
+            <span class="body-text">
+                <p>
+                    There are a few things I think you should keep in mind when using Meshlet:
+                </p>
+                <ul>
+                    <li><strong>THE BQ24074 ONLY SUPPORTS 1 BATTERY CELL. THERE ARE TWO BATTERY CONNECTORS. DO NOT USE BOTH AT ONCE.</strong> thank u :)</li>
+                    <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>Changing this to 1A may require you to replace fuse F1</strong> with a more suitable part/</li>
+                    <li>You have the option to attach an 0402 SMD 10k thermistor. This will cut off charging above certain temperatures. It may also be influenced by the temperature of the BQ24074, as it's quite close to it; my bad. It's probably negligible though! Better safe than sorry for outdoor nodes.</li>
+                    <li>The solar charging is based on the BQ24074's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels, anything too far above 6V will just be dissipated as heat!</li>
+                    <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself off sunlight.</li>
+                    <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). It's still pretty new, and I haven't yet tested it with this board.</li>
+                    <li>GPS switching is <em>half supported.</em> The EN pin is present, and can be configured, however it won't actually do anything unless you have a GPS module that can handle it natively, or an extra board with the right MOSFET arrangement to act as a middleman.</li>
+                    <li>The power switch is bypassed by default. You will need to cut jumper JP6 to disable the bypass if you want to add one. <strong>The power switch will only toggle the output of the BQ24074 and will <strong>NOT</strong> disable battery charging!</strong></li>
+                </ul>
+            </span>
+        </div>
+
+        <footer>
+            <div id="footer" incl-html="/include/footer.html"></div>
+        </footer>
+
+        <script>
+            includeHTML();
+        </script>
+    </body>
+
+</html>
