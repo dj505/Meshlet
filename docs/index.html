@@ -85,6 +85,7 @@
                     </p>
                     <ul>
                         <li><strong>THE BQ24074 ONLY SUPPORTS 1 BATTERY CELL. THERE ARE TWO BATTERY CONNECTORS. DO NOT USE BOTH AT ONCE.</strong> thank u :)</li>
+                        <li>There are some power output pins for attaching extra expansion thingies if you can't power them through the I2C connector. I think the USB and 3V3 are obvious, but the "BMS" pin is the regulated output from the BQ24074 and will never exceed 4.4V. Good for hooking up to another regulator, if you need to.</li>
                         <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>Changing this to 1A may require you to replace fuse F1</strong> with a more suitable part/</li>
                         <li>You have the option to attach an 0402 SMD 10k thermistor. This will cut off charging above certain temperatures. It may also be influenced by the temperature of the BQ24074, as it's quite close to it; my bad. It's probably negligible though! Better safe than sorry for outdoor nodes.</li>
                         <li>The solar charging is based on the BQ24074's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels, anything too far above 6V will just be dissipated as heat!</li>
