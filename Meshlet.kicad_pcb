@@ -29882,6 +29882,17 @@
 			(uuid "0a82f331-c125-474c-98ef-4f4be398ad86")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/RM2/rpi_rmc20452t.step"
+			(offset
+				(xyz 0 -8.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "Graphics:HalftoneOverlay"
 		(layer "B.Cu")
