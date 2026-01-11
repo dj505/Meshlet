@@ -8610,7 +8610,7 @@
 		(at 145.536899 88.922201 -90)
 		(descr "Inductor with Polarity Marking 2016")
 		(property "Reference" "L1"
-			(at 0.783602 -1.49701 90)
+			(at -0.002201 -1.503101 90)
 			(layer "F.SilkS")
 			(uuid "a5f0e2c6-f8b4-4b33-bad8-83be47bece63")
 			(effects
@@ -25990,6 +25990,17 @@
 		(layer "F.SilkS")
 		(uuid "15ebd9bd-83f1-49af-aafd-f7df85562a00")
 	)
+	(gr_rect
+		(start 156.8068 92.1978)
+		(end 161.9122 93.29)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "164003b1-9e73-4dda-be4f-50f63a7173fb")
+	)
 	(gr_poly
 		(pts
 			(xy 125.693077 79.487256) (xy 125.701202 79.487944) (xy 125.709306 79.489028) (xy 125.717377 79.490511)
@@ -26191,6 +26202,17 @@
 		)
 		(layer "F.SilkS")
 		(uuid "7c90d1a2-b6ca-425e-9ad9-cdd42f6cc42f")
+	)
+	(gr_rect
+		(start 156.8068 93.299101)
+		(end 161.0614 93.526799)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "93ae56f6-8cf5-4574-aea0-c84dd5da8ee6")
 	)
 	(gr_line
 		(start 138.4173 106.903992)
@@ -38879,6 +38901,18 @@
 			(justify bottom)
 		)
 	)
+	(gr_text "+"
+		(at 157.6832 95.2246 0)
+		(layer "F.SilkS")
+		(uuid "6bf37560-2dc2-4058-948e-3a288da06418")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+		)
+	)
 	(gr_text "uh"
 		(at 144.5133 107.044 0)
 		(layer "F.SilkS")
@@ -38975,6 +39009,19 @@
 				(italic yes)
 			)
 			(justify bottom)
+		)
+	)
+	(gr_text "SOLAR/EXT"
+		(at 156.7306 93.0868 0)
+		(layer "F.SilkS" knockout)
+		(uuid "f9a48b65-554e-46d3-976c-d6a0db843fb6")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+				(bold yes)
+			)
+			(justify left bottom)
 		)
 	)
 	(gr_text "oh"
@@ -39536,6 +39583,20 @@
 				(italic yes)
 			)
 			(justify left top mirror)
+		)
+	)
+	(gr_text "DESIGNED IN EDMONTON, AB"
+		(at 134.8486 109.728 270)
+		(layer "B.SilkS")
+		(uuid "b75976a0-8e54-4a0c-8110-c529ac27cea7")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+				(bold yes)
+				(italic yes)
+			)
+			(justify left bottom mirror)
 		)
 	)
 	(gr_text ":"
@@ -57453,6 +57514,10 @@
 	(group ""
 		(uuid "1e9a3eb8-5e85-438c-8140-177e4e23b131")
 		(members "0674f55b-8e56-42f4-8338-8cafe907d406" "99ef4fce-fde3-47d4-8909-31285d43c4b1")
+	)
+	(group ""
+		(uuid "463b2673-feb0-42f3-8544-4b9ae2b43eb3")
+		(members "164003b1-9e73-4dda-be4f-50f63a7173fb" "f9a48b65-554e-46d3-976c-d6a0db843fb6")
 	)
 	(group ""
 		(uuid "8bc530d5-ef5c-4e02-8a21-949f9eacb6b3")
