@@ -21,7 +21,7 @@
             Quick Index<br/><br/>
             <a href="#top">Back to Top</a><br/>
             <a href="#what-is">What is it?</a><br/>
-            <a href="#use-notes">Usage Notes</a><br/>
+            <a href="#use-notes">Usage</a><br/>
         </div>
 
         <div class="content" id="top">
@@ -58,41 +58,39 @@
                         Features include, but are not limited to...
                     </p>
                     <ul>
-                        <li>USB C, with configurable charge rate limit (500mA or 1A)</li>
-                        <li>ESD protection on USB D+/-</li>
-                        <li>Solar input, as well as constant DC input, up to 10V safe</li>
-                        <li>JST 2.0 and Picoblade 1.5mm battery connectors to fit whatever MakerFocus LiPos you've got laying around</li>
-                        <li>GPS module header</li>
+                        <li>USB C, with configurable charge rate limit (250mA, 500mA, 1A)</li>
+                        <li>LiPo/LiIon and LiFePo4 support</li>
+                        <li>USB port ESD protection</li>
+                        <li>Solar input (as well as constant DC input) from 3.3V to 18V, tolerant up to 25V</li>
+                        <li>JST 2.0 and Picoblade 1.5mm battery connector footprints to hopefully fit whatever LiPos you've got laying around</li>
                         <li>Up to 8MB onboard flash</li>
-                        <li>SWD port compatible with the official Raspberry Pi Pico Debug Probe</li>
                         <li>Active current/voltage monitoring and reporting on the USB power line, external DC/solar input, and regulated 3.3V supply via INA3221</li>
                         <li>WIO-SX1262 LoRa radio</li>
                         <li>BME280 temperature/humidity/barometric pressure sensor</li>
-                        <li>I2C expansion port compatible with the Adafruit STEMMA QT standard</li>
-                        <li>Self-resetting fuse</li>
+                        <li>I2C expansion port</li>
+                        <li>Dedicated 3.3V regulators for all major components, each with a self-resetting fuse</li>
                         <li>"External notification" header for a MOSFET-driven 3.3V buzzer, LED, vibration motor, etc</li>
-                        <li>Raspberry Pi RM2 for optional WiFi & Bluetooth</li>
-                        <li>Total footprint size of ~60*40mm, smaller than a credit card!</li>
+                        <li>Raspberry Pi RM2 for optional WiFi (and Bluetooth, whenever the firmware supports it)</li>
+                        <li>Total footprint size of ~42*32mm, half the size of a credit card!</li>
                     </ul>
                 </span>
             </div>
 
             <div>
-                <h2 class="body-header">Usage Notes</h2>
+                <h2 class="body-header">Usage</h2>
                 <span class="body-text">
                     <p>
                         There are a few things I think you should keep in mind when using Meshlet:
                     </p>
                     <ul>
-                        <li><strong>THE BQ24074 ONLY SUPPORTS 1 BATTERY CELL. THERE ARE TWO BATTERY CONNECTORS. DO NOT USE BOTH AT ONCE.</strong> thank u :)</li>
-                        <li>There are some power output pins for attaching extra expansion thingies if you can't power them through the I2C connector. I think the USB and 3V3 are obvious, but the "BMS" pin is the regulated output from the BQ24074 and will never exceed 4.4V. Good for hooking up to another regulator, if you need to.</li>
-                        <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>Changing this to 1A may require you to replace fuse F1</strong> with a more suitable part/</li>
-                        <li>You have the option to attach an 0402 SMD 10k thermistor. This will cut off charging above certain temperatures. It may also be influenced by the temperature of the BQ24074, as it's quite close to it; my bad. It's probably negligible though! Better safe than sorry for outdoor nodes.</li>
-                        <li>The solar charging is based on the BQ24074's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels, anything too far above 6V will just be dissipated as heat!</li>
-                        <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself off sunlight.</li>
-                        <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). It's still pretty new, and I haven't yet tested it with this board.</li>
-                        <li>GPS switching is <em>half supported.</em> The EN pin is present, and can be configured, however it won't actually do anything unless you have a GPS module that can handle it natively, or an extra board with the right MOSFET arrangement to act as a middleman.</li>
-                        <li>The power switch is bypassed by default. You will need to cut jumper JP6 to disable the bypass if you want to add one. <strong>The power switch will only toggle the output of the BQ24074 and will <strong>NOT</strong> disable battery charging!</strong></li>
+                        <li><strong>The BQ2185 only supports 1 cell in series!!!</strong> You can connect multiple in parallel if you know what you're doing, but please be safe and do your research!</li>
+                        <li>There are some power test points for attaching extra expansion thingies if you can't power them through the I2C pads. I think the USB and 3V3 are obvious, but the "BMS" pin is the regulated output from the BQ25185 and will never exceed 4.5V. Good for hooking up to another regulator, if you need to.</li>
+                        <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>You will need to lower this if you're using a battery smaller than 500mAh to avoid starting a fire!</strong></li>
+                        <li>You have the option to attach a 10k NTC thermistor. This will cut off charging above/below certain temperatures. To use it, cut the "NTC" jumper on the front of the board, and solder it to the "THERMISTOR" through-hole connector.</li>
+                        <li>The solar charging is based on the BQ25185's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels.</li>
+                        <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though, and I've been able to achieve several days of runtime on a 3000mAh battery. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself with sunlight.</li>
+                        <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). Currently, the firmware only supports WiFi.</li>
+                        <li>The on-board power switch originally present has been removed from version 2, as it's more than adequate to simply wire a switch in series with the board's power supply. Please make sure that you select a suitable switch for the task!</li>
                     </ul>
                 </span>
             </div>
