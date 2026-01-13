@@ -10305,7 +10305,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 114.3) (xy 227.33 114.3)
+			(xy 217.17 115.57) (xy 222.25 115.57)
 		)
 		(stroke
 			(width 0)
@@ -10935,7 +10935,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 114.3) (xy 217.17 110.49)
+			(xy 217.17 115.57) (xy 217.17 110.49)
 		)
 		(stroke
 			(width 0)
@@ -12625,6 +12625,16 @@
 	)
 	(wire
 		(pts
+			(xy 222.25 114.3) (xy 227.33 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f01f07a-e336-42d8-bb2b-1d8e4e431994")
+	)
+	(wire
+		(pts
 			(xy 96.52 166.37) (xy 99.06 166.37)
 		)
 		(stroke
@@ -13112,6 +13122,16 @@
 			(type default)
 		)
 		(uuid "aad3bb1e-e0c9-4467-86f4-6771a894100d")
+	)
+	(wire
+		(pts
+			(xy 222.25 115.57) (xy 222.25 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab60d9cb-c338-472c-a9e7-2c2da4bda1c8")
 	)
 	(wire
 		(pts
@@ -17978,7 +17998,7 @@
 				)
 			)
 		)
-		(property "Value" "STEMMA QT I2C"
+		(property "Value" "I2C Header"
 			(at 257.81 53.34 0)
 			(effects
 				(font
@@ -18014,7 +18034,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C50137"
+		(property "LCSC" ""
 			(at 257.81 44.45 0)
 			(effects
 				(font
@@ -19116,8 +19136,8 @@
 				)
 			)
 		)
-		(property "Value" "PV"
-			(at 213.614 110.236 0)
+		(property "Value" "POWER VALID"
+			(at 213.614 115.316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19369,6 +19389,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25754"
+			(at 247.65 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6866d873-d8ee-4360-a8ca-bf1579f78817")
 		)
@@ -19555,8 +19584,8 @@
 				)
 			)
 		)
-		(property "Value" "CHG"
-			(at 216.154 110.998 0)
+		(property "Value" "CHARGE"
+			(at 216.154 112.776 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20150,6 +20179,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25117"
+			(at 39.37 176.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7025bcce-5215-40d5-8a26-cda53bff7ebb")
 		)
@@ -20345,8 +20383,8 @@
 				)
 			)
 		)
-		(property "Value" "HB"
-			(at 129.286 89.916 0)
+		(property "Value" "HEARTBEAT"
+			(at 130.81 88.392 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23291,6 +23329,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25126"
+			(at 273.05 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "158e5be2-f90c-4f07-99ed-aa7380b4b326")
 		)
@@ -23510,7 +23557,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C27910"
+		(property "LCSC" ""
 			(at 234.95 44.45 0)
 			(effects
 				(font
@@ -23891,6 +23938,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25862"
+			(at 278.13 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4bcc8d1a-0a0a-424a-9311-9a001a8e0173")
 		)
@@ -24049,6 +24105,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 229.87 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C105226"
+			(at 229.87 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24340,8 +24405,8 @@
 				)
 			)
 		)
-		(property "Value" "FLT"
-			(at 218.694 110.744 0)
+		(property "Value" "FAULT"
+			(at 218.694 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24855,6 +24920,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25102"
+			(at 267.97 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5a829394-93bb-46d4-82fa-21eb5e7f6d1a")
 		)
@@ -25222,6 +25296,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 246.38 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C19725033"
 			(at 246.38 114.3 0)
 			(effects
 				(font
@@ -26430,6 +26513,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C20917"
+			(at 162.56 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "17a1db73-e676-4091-be56-6c0b0705a64c")
 		)
@@ -27190,6 +27282,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C105226"
+			(at 217.17 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "573cc051-9d99-49ff-b102-9739532e0d47")
 		)
@@ -27403,6 +27504,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 247.65 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25905"
+			(at 247.65 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27825,6 +27935,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 269.24 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 269.24 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -28557,6 +28676,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 39.37 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d0bb5d67-e3e2-4c54-96c5-7604940b7086")
 		)
@@ -29065,6 +29193,15 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 223.52 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C105226"
+			(at 223.52 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
