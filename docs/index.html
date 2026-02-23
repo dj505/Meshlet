@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Meslhet | 5panel.dance</title>
+        <title>Meshlet v2 | 5panel.dance</title>
         <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
         <link type="text/css" rel="stylesheet" href="/stylesheets/labels.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
@@ -42,7 +42,7 @@
                 </h2>
                 <dl>
                     <dt>Meshlet is a work in progress!</dt>
-                    <dd>This board is currently untested, and will be until I can afford to order a test batch.</dd>
+                    <dd>The board has been tested and working short-term, but has not yet undergone extensive testing in the field. Keep an eye out here for updates!</dd>
                 </dl>
             </div>
 
@@ -61,18 +61,30 @@
                     <ul>
                         <li>USB C, with configurable charge rate limit (250mA, 500mA, 1A)</li>
                         <li>LiPo/LiIon and LiFePo4 support</li>
-                        <li>USB port ESD protection</li>
+                        <li>ESD/TVS protection on the USB port</li>
                         <li>Solar input (as well as constant DC input) from 3.3V to 18V, tolerant up to 25V</li>
-                        <li>JST 2.0 and Picoblade 1.5mm battery connector footprints to hopefully fit whatever LiPos you've got laying around</li>
+                        <ul>
+                            <li>Flexible wiring methods, with dedicated JST PH footprints as well as pads to directly solder wires to!</li>
+                            <li>Tested & working with as little as a cheap 80mm 5v solar panel, on an overcast Canadian winter day!</li>
+                            <li>Unlike many boards that need a manual reset after too little sunlight drains the battery, the Meshlet should recover on its own!</li>
+                        </ul>
+                        <li>Smart power path management, thanks to the BQ25185. No need to worry about unnecessarily cycling the battery!</li>
+                        <li>JST 2.0 and Picoblade 1.5mm battery connector footprints, to hopefully fit whatever LiPos you've got laying around</li>
+                        <li>Low operating power, measuring as low as 2.8mA idle current draw (without WiFi)</li>
+                        <li>Active current/voltage monitoring and reporting on 3 channels over the mesh, via INA3221</li>
+                        <ul>
+                            <li>Ch. 1: Battery</li>
+                            <li>Ch. 2: USB & external power</li>
+                            <li>Ch. 3: BQ25185 regulated battery output</li>
+                        </ul>
                         <li>Up to 8MB onboard flash</li>
-                        <li>Active current/voltage monitoring and reporting on the USB power line, external DC/solar input, and regulated 3.3V supply via INA3221</li>
                         <li>WIO-SX1262 LoRa radio</li>
                         <li>BME280 temperature/humidity/barometric pressure sensor</li>
                         <li>I2C expansion port</li>
-                        <li>Dedicated 3.3V regulators for all major components, each with a self-resetting fuse</li>
+                        <li>Dedicated 3.3V regulators for all major components, each with its own self-resetting fuse, to ensure stable power</li>
                         <li>"External notification" header for a MOSFET-driven 3.3V buzzer, LED, vibration motor, etc</li>
                         <li>Raspberry Pi RM2 for optional WiFi (and Bluetooth, whenever the firmware supports it)</li>
-                        <li>Total footprint size of ~42*32mm, half the size of a credit card!</li>
+                        <li>Total footprint size of ~42*32mm, less than half the size of a credit card!</li>
                     </ul>
                 </span>
             </div>
@@ -85,7 +97,7 @@
                     </p>
                     <p>
                         This board was partially designed with the intention of fitting those really cheap little hot plates you can get on AliExpress.
-                        To save on costs, unless you're buying a prebuilt unit from me somehow, I would suggest ordering the PCBs along with a stencil and using one of these hot plates.
+                        To save on costs, unless you're buying a prebuilt unit from me somehow, it is feasible to order the PCBs along with a stencil and using one of these hot plates. However, I would only recommend doing this if you're experienced with it!
                         The cost of the hot plate is roughly equivalent to what you'd spend on PCBA "extended component" fees from JLC anyway, and you can keep reusing it! Just make sure you have a suitable USB C power source for it.
                     </p>
                 </span>
@@ -99,11 +111,12 @@
                     </p>
                     <ul>
                         <li><strong>The BQ2185 only supports 1 cell in series!!!</strong> You can connect multiple in parallel if you know what you're doing, but please be safe and do your research!</li>
+                        <li>The board is configured for LiPo/LiIon batteries by default. LiFePO4 batteries are supported, but you <strong>must</strong> flip the board over, cut the jumper in the lower left corner, and bridge the "LiFePO4" side (on the left) with some solder first!</li>
                         <li>There are some power test points for attaching extra expansion thingies if you can't power them through the I2C pads. I think the USB and 3V3 are obvious, but the "BMS" pin is the regulated output from the BQ25185 and will never exceed 4.5V. Good for hooking up to another regulator, if you need to.</li>
                         <li>The configurable charge rate very strongly depends on your use case. It is configured at 500mA by default, which should be enough for just about all use cases. <strong>You will need to lower this if you're using a battery smaller than 500mAh to avoid starting a fire!</strong></li>
                         <li>You have the option to attach a 10k NTC thermistor. This will cut off charging above/below certain temperatures. To use it, cut the "NTC" jumper on the front of the board, and solder it to the "THERMISTOR" through-hole connector.</li>
                         <li>The solar charging is based on the BQ25185's capabilities and is not a "true" MPPT. You will have the best results with 5-7V panels.</li>
-                        <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not as bad as the ESP32, though, and I've been able to achieve several days of runtime on a 3000mAh battery. You should consider using a larger solar panel and battery than you would for a super low power node, if it needs to sustain itself with sunlight.</li>
+                        <li>The RP2350, even when downclocked, still consumes more power than an nRF52. It's not nearly as bad as the ESP32, though, and I've been able to achieve roughly 3mA average power draw with no WiFi module attached. That's a good amount of runtime!</li>
                         <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). Currently, the firmware only supports WiFi.</li>
                         <li>The on-board power switch originally present has been removed from version 2, as it's more than adequate to simply wire a switch in series with the board's power supply. Please make sure that you select a suitable switch for the task!</li>
                     </ul>
