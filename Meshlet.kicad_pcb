@@ -918,7 +918,7 @@
 				)
 			)
 		)
-		(property "Value" "FAULT"
+		(property "Value" "FAULT (Red)"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "bcc3b2d9-e747-4ffe-b486-23f18e1159a8")
@@ -2053,7 +2053,7 @@
 				)
 			)
 		)
-		(property "Value" "SolderJumper_2_Open"
+		(property "Value" "1A Charge"
 			(at 0 1.9 90)
 			(layer "F.Fab")
 			(uuid "571bfd13-9edb-40e1-95c3-88fc266988f8")
@@ -2535,7 +2535,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "e6882256-882f-4d4c-84ff-077799815b91")
@@ -7913,7 +7913,7 @@
 				)
 			)
 		)
-		(property "Value" "Thermistor Pins"
+		(property "Value" "10k Thermistor"
 			(at 0 4.919999 90)
 			(layer "F.Fab")
 			(uuid "11ed49bd-e416-4676-92c1-c06c262e3df7")
@@ -8545,7 +8545,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "50fef68f-2fdb-4387-8e6a-e4a72bc490b5")
@@ -10946,7 +10946,7 @@
 				)
 			)
 		)
-		(property "Value" "HEARTBEAT"
+		(property "Value" "HEARTBEAT (Red)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "d65f283d-3032-43fe-86f6-4036a90ab369")
@@ -12184,7 +12184,7 @@
 				)
 			)
 		)
-		(property "Value" "CHARGE"
+		(property "Value" "CHARGE (Blu)"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "1bb06aab-4724-4829-afed-98a8b9e91aee")
@@ -12656,7 +12656,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "18663b0b-2830-4dec-8b97-43388979f35a")
@@ -13544,7 +13544,7 @@
 				)
 			)
 		)
-		(property "Value" "SolderJumper_2_Bridged"
+		(property "Value" "500mA Charge"
 			(at 0 1.9 90)
 			(layer "F.Fab")
 			(uuid "e99e414c-4213-4283-baed-d4dd48193eab")
@@ -14648,7 +14648,7 @@
 				)
 			)
 		)
-		(property "Value" "BOOTSEL"
+		(property "Value" "BOOTSEL Sw"
 			(at 0 3.749999 0)
 			(layer "F.Fab")
 			(uuid "e94666bc-f120-4ddd-a284-a26b3a14481f")
@@ -21089,7 +21089,7 @@
 				)
 			)
 		)
-		(property "Value" "POWER VALID"
+		(property "Value" "POWER VALID (Grn)"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "f9ae303e-ff9e-4b61-88bf-7d0a80aaa809")
@@ -23390,7 +23390,7 @@
 				)
 			)
 		)
-		(property "Value" "SolderJumper_2_Open"
+		(property "Value" "250mA Charge"
 			(at 0 1.9 90)
 			(layer "F.Fab")
 			(uuid "26a86c52-0f1f-405d-9bbf-4540bab86186")
@@ -24763,7 +24763,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "RPi RM2"
 			(at 0 -1 90)
 			(unlocked yes)
 			(layer "B.Fab")

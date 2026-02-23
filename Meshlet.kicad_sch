@@ -18169,7 +18169,7 @@
 				)
 			)
 		)
-		(property "Value" "Thermistor Pins"
+		(property "Value" "10k Thermistor"
 			(at 241.935 147.32 0)
 			(effects
 				(font
@@ -19136,7 +19136,7 @@
 				)
 			)
 		)
-		(property "Value" "POWER VALID"
+		(property "Value" "POWER VALID (Grn)"
 			(at 213.614 115.316 0)
 			(effects
 				(font
@@ -19584,7 +19584,7 @@
 				)
 			)
 		)
-		(property "Value" "CHARGE"
+		(property "Value" "CHARGE (Blu)"
 			(at 216.154 112.776 0)
 			(effects
 				(font
@@ -19670,7 +19670,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SolderJumper_2_Bridged"
+		(property "Value" "500mA Charge"
 			(at 275.59 138.4299 90)
 			(effects
 				(font
@@ -20297,7 +20297,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 198.374 29.718 90)
 			(effects
 				(font
@@ -20383,7 +20383,7 @@
 				)
 			)
 		)
-		(property "Value" "HEARTBEAT"
+		(property "Value" "HEARTBEAT (Red)"
 			(at 130.81 88.392 0)
 			(effects
 				(font
@@ -21318,7 +21318,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 52.324 147.828 90)
 			(effects
 				(font
@@ -21469,7 +21469,7 @@
 				)
 			)
 		)
-		(property "Value" "6V 0.5A"
+		(property "Value" "6V 0.5A 0603"
 			(at 198.374 83.058 90)
 			(effects
 				(font
@@ -23815,7 +23815,7 @@
 				)
 			)
 		)
-		(property "Value" "BOOTSEL"
+		(property "Value" "BOOTSEL Sw"
 			(at 123.19 104.902 0)
 			(effects
 				(font
@@ -24405,7 +24405,7 @@
 				)
 			)
 		)
-		(property "Value" "FAULT"
+		(property "Value" "FAULT (Red)"
 			(at 218.694 111.76 0)
 			(effects
 				(font
@@ -24570,7 +24570,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SolderJumper_2_Open"
+		(property "Value" "250mA Charge"
 			(at 270.51 138.4299 90)
 			(effects
 				(font
@@ -26839,7 +26839,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "RPi RM2"
 			(at 55.88 161.29 0)
 			(effects
 				(font
@@ -28331,7 +28331,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SolderJumper_2_Open"
+		(property "Value" "1A Charge"
 			(at 280.67 138.4299 90)
 			(effects
 				(font
