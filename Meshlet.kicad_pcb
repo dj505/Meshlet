@@ -2095,7 +2095,7 @@
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom dnp allow_soldermask_bridges)
 		(fp_poly
 			(pts
 				(xy -0.15 -0.75) (xy 0.15 -0.75) (xy 0.15 0.75) (xy -0.15 0.75)
@@ -4951,7 +4951,6 @@
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
-		(path "/ef34eabe-a927-475c-a896-7f676a5f4f8b")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(attr exclude_from_pos_files)
@@ -6102,7 +6101,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "1uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "0a9ee8be-3b78-484c-acf6-d670ecc67e77")
@@ -7475,7 +7474,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "10uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "7794fb6f-d244-4533-80f3-11f70f608f7d")
@@ -8333,7 +8332,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "1uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "26dcbd47-22d7-4dc0-ba44-6a46a7a111e8")
@@ -13586,7 +13585,7 @@
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom dnp allow_soldermask_bridges)
 		(net_tie_pad_groups "1, 2")
 		(fp_poly
 			(pts
@@ -14304,7 +14303,7 @@
 		(path "/09b20da5-a62f-4064-bfa9-e525bc233ddc")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 0.9906 2.9718)
 			(end 0.9906 -0.9906)
@@ -16480,7 +16479,7 @@
 		(path "/6b87b0b7-447f-42de-a584-cce33cc0fcd5")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr smd dnp)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 4.06 -3.31)
 			(end 3.04 -3.31)
@@ -19283,7 +19282,6 @@
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
-		(path "/66e4f2db-0964-466e-beb9-8b72eb689350")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(attr exclude_from_pos_files)
@@ -20712,7 +20710,7 @@
 		(path "/ea519847-a9ca-4d9c-9eae-9ec23d6290ae")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start -0.9906 -0.9906)
 			(end -0.9906 2.9972)
@@ -21591,7 +21589,7 @@
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom dnp allow_soldermask_bridges)
 		(net_tie_pad_groups "1, 2")
 		(fp_poly
 			(pts
@@ -23432,7 +23430,7 @@
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom dnp allow_soldermask_bridges)
 		(fp_poly
 			(pts
 				(xy -0.15 -0.75) (xy 0.15 -0.75) (xy 0.15 0.75) (xy -0.15 0.75)
@@ -23718,7 +23716,7 @@
 		(path "/7f604726-8d80-4a91-a4dd-3c7cd6b8566d")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start 1.8542 1.016)
 			(end -1.8542 1.016)
@@ -23880,7 +23878,7 @@
 		(path "/14e2be8e-8c96-4d7b-a74d-fbd515e21b78")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start -0.9906 0.9906)
 			(end -0.9906 -6.985)
@@ -24483,7 +24481,7 @@
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(zone_connect 1)
-		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom dnp allow_soldermask_bridges)
 		(net_tie_pad_groups "1,2")
 		(fp_poly
 			(pts
@@ -24807,7 +24805,7 @@
 		(path "/c182cc8b-e199-4840-ac52-5c144907c31b")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr smd exclude_from_bom dnp)
+		(attr smd)
 		(fp_line
 			(start -7.25 -0.25)
 			(end 7.25 -0.25)
@@ -25255,7 +25253,6 @@
 			)
 		)
 		(property ki_fp_filters "Pin* Test*")
-		(path "/f1ee3b0a-03e6-4b7c-bc47-c8ed8f1a542b")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
 		(attr exclude_from_pos_files)
@@ -25375,7 +25372,6 @@
 		(path "/f62d8262-701e-48e2-acdc-4c8294f0c6d5")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr dnp)
 		(fp_line
 			(start 0 10.6)
 			(end 0.000001 0.4)
@@ -25709,7 +25705,7 @@
 		(path "/29abb77c-1427-431d-9923-1ab1bcffb124")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_bom dnp)
 		(fp_line
 			(start -1.0414 0.6604)
 			(end -1.0414 -5.6896)
@@ -25946,7 +25942,7 @@
 		(path "/a8c65914-63a2-43b8-82ef-9903c2fe092a")
 		(sheetname "/")
 		(sheetfile "Meshlet.kicad_sch")
-		(attr smd dnp)
+		(attr smd)
 		(fp_line
 			(start 2.235 -2.71)
 			(end 2.235 -2.26)
