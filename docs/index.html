@@ -196,12 +196,23 @@
                     </ul>
                     <h3>App Configuration</h3>
                     <p>
-                        For the board to work properly, you will need to adjust some settings within the app.
+                        For the board to work properly, you will need to adjust some settings within the app. Many of these should work out-of-the-box with the right firmware, but are included here in case they don't.
                     </p>
                     <ul>
-                        <li><strong>Device</strong>: Button or Buzzer GPIO = 22</li>
+                        <li><strong>Device</strong>:</li>
+                        <ul>
+                            <li><strong>Button GPIO</strong>: 17 (only set if it doesn't work by default!)</li>
+                            <li><strong>Buzzer GPIO</strong>: 22</li>
+                        </ul>
                         <li><strong>Power</strong>: Battery INA_2XX i2c address = 0x42 (or 66)</li>
-                        <li><strong>External Notification</strong>: Output LED or Buzzer GPIO = 22</li>
+                        <li><strong>External Notification</strong> (if desired):</li>
+                        <ul>
+                            <li><strong>External notification enabled</strong>: ON</li>
+                            <li><strong>Alert message LED/Buzzer/Vibra</strong> (pick 1): ON</li>
+                            <li><strong>Alert bell LED/Buzzer/Vibra</strong> (pick 1): ON</li>
+                            <li><strong>Output LED/Buzzer/Vibra</strong> (pick 1): 22</li>
+                            <li><strong>Output LED active high</strong>: ON</li>
+                        </ul>
                         <li><strong>Telemetry</strong> (if desired):</li>
                         <ul>
                             <li><strong>Send Device Telemetry</strong>: ON</li>

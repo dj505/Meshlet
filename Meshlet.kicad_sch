@@ -10305,7 +10305,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 115.57) (xy 222.25 115.57)
+			(xy 217.17 114.3) (xy 227.33 114.3)
 		)
 		(stroke
 			(width 0)
@@ -10935,7 +10935,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 115.57) (xy 217.17 110.49)
+			(xy 217.17 114.3) (xy 217.17 110.49)
 		)
 		(stroke
 			(width 0)
@@ -12625,16 +12625,6 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 114.3) (xy 227.33 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f01f07a-e336-42d8-bb2b-1d8e4e431994")
-	)
-	(wire
-		(pts
 			(xy 96.52 166.37) (xy 99.06 166.37)
 		)
 		(stroke
@@ -13122,16 +13112,6 @@
 			(type default)
 		)
 		(uuid "aad3bb1e-e0c9-4467-86f4-6771a894100d")
-	)
-	(wire
-		(pts
-			(xy 222.25 115.57) (xy 222.25 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab60d9cb-c338-472c-a9e7-2c2da4bda1c8")
 	)
 	(wire
 		(pts
@@ -19137,7 +19117,7 @@
 			)
 		)
 		(property "Value" "POWER VALID (Grn)"
-			(at 213.614 115.316 0)
+			(at 213.36 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19584,8 +19564,8 @@
 				)
 			)
 		)
-		(property "Value" "CHARGE (Blu)"
-			(at 216.154 112.776 0)
+		(property "Value" "CHG (Blu)"
+			(at 215.9 113.792 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20384,7 +20364,7 @@
 			)
 		)
 		(property "Value" "HEARTBEAT (Red)"
-			(at 130.81 88.392 0)
+			(at 125.222 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24406,7 +24386,7 @@
 			)
 		)
 		(property "Value" "FAULT (Red)"
-			(at 218.694 111.76 0)
+			(at 218.44 114.808 0)
 			(effects
 				(font
 					(size 1.27 1.27)
