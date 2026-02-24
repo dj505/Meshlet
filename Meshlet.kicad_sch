@@ -26832,7 +26832,7 @@
 		(dnp no)
 		(uuid "c182cc8b-e199-4840-ac52-5c144907c31b")
 		(property "Reference" "U10"
-			(at 55.88 161.544 0)
+			(at 55.88 159.512 0)
 			(effects
 				(font
 					(size 1.27 1.27)

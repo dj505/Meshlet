@@ -22,7 +22,9 @@
             <a href="#top">Back to Top</a><br/>
             <a href="#what-is">What is it?</a><br/>
             <a href="#assembly">Assembly</a><br/>
+            <a href="#firmware">Firmware</a><br/>
             <a href="#use-notes">Usage</a><br/>
+            <a href="#source">Source</a><br/>
         </div>
 
         <div class="content" id="top">
@@ -100,6 +102,77 @@
                         To save on costs, unless you're buying a prebuilt unit from me somehow, it is feasible to order the PCBs along with a stencil and using one of these hot plates. However, I would only recommend doing this if you're experienced with it!
                         The cost of the hot plate is roughly equivalent to what you'd spend on PCBA "extended component" fees from JLC anyway, and you can keep reusing it! Just make sure you have a suitable USB C power source for it.
                     </p>
+                    <p>
+                        <strong>Any parts <em>not</em> specifically listed as being optional for specific use cases are considered necessary!</strong><br />
+                        If there are specific features you do or don't need, see the following modifications. <strong>This also includes parts that MUST be left out if another part is chosen</strong>, i.e. specific battery connectors.
+                    </p>
+                    <h3>No WiFi/Bluetooth</h3>
+                    <p>
+                        If you don't need WiFi or Bluetooth, you can leave out:
+                        <ul>
+                            <li><strong>U10</strong>: Raspberry Pi RM2</li>
+                            <li><strong>R25</strong>: 470Ω 0402 resistor</li>
+                            <li><strong>R28</strong>: 10kΩ 0402 resistor</li>
+                            <li><strong>C32</strong>: 47μF 0402 ceramic capacitor</li>
+                        </ul>
+                    </p>
+                    <h3>No BME280</h3>
+                    <p>
+                        If you don't need temperature/humidity or other environmental metrics, you can leave out:
+                        <ul>
+                            <li><strong>U7</strong>: BME280</li>
+                            <li><strong>C22</strong>: 100nF 0402 ceramic capacitor</li>
+                            <li><strong>C23</strong>: 100nF 0402 ceramic capacitor</li>
+                        </ul>
+                    </p>
+                    <h3>JST 2.0mm vs. Picoblade 1.25mm Battery Connector</h3>
+                    <p>
+                        There are two options for battery connectors, both on the same physical space on the board.<br />
+                        If you don't wish to use a battery, both of these can be ignored. If you do, <strong>you MUST pick at least <em>one</em> out of the following:</strong>
+                        <ul>
+                            <li><strong>J3</strong>: Molex Picoblade 1.25mm connector (often conflated with "JST 1.25mm" connectors in 3rd party listings)</li>
+                            <li><strong>J4</strong>: JST-PH 2.0mm connector</li>
+                        </ul>
+                    </p>
+                    <h3>No Solar/Ext. Connector</h3>
+                    <p>
+                        If you wish to solder external power wires from your preferred source directly to the pins on the back of the board, or only use USB input, you can leave out:
+                        <ul>
+                            <li><strong>J7</strong>: JST-PH 2.0mm connector (located on top, beside the USB port)</li>
+                        </ul>
+                    </p>
+                    <h3>No LEDs</h3>
+                    <p>
+                        If you don't need any specific LED indicators, you can leave out any of the following:
+                        <ul>
+                            <li><strong>D3</strong>: 0603 SMD LED - heartbeat indicator</li>
+                            <li><strong>D4</strong>: 0603 SMD LED - power indicator</li>
+                            <li><strong>D5</strong>: 0603 SMD LED - charge indicator</li>
+                            <li><strong>D6</strong>: 0603 SMD LED - power/battery fault indicator</li>
+                        </ul>
+                    </p>
+                    <h3>Recommended LED Colours</h3>
+                    <p>
+                        These are the colours I recommend using for each indicator LED. These can be whatever you want, but consider adjusting the resistor values for each depending on the colour(s) you choose:
+                        <ul>
+                            <li><strong>D3</strong>: heartbeat indicator, recommended <span class="label-red">RED</span></li>
+                            <li><strong>D4</strong>: power indicator, recommended <span class="label-green">GREEN</span></li>
+                            <li><strong>D5</strong>: charge indicator, recommended <span class="label-blue">BLUE</span></li>
+                            <li><strong>D6</strong>: power/battery fault indicator, recommended <span class="label-red">RED</span></li>
+                        </ul>
+                        By default, the resistor values for these are quite high, and they're difficult to see in bright conditions. This was done to save on energy while still allowing me to debug the boards indoors. You may wish to make them brighter, or dimmer.
+                        Green and red lights will need weaker resistors than blue lights to resemble the same brightness.
+                    </p>
+                </span>
+            </div>
+
+            <div id="firmware">
+                <h2 class="body-header">Firmware</h2>
+                <span class="body-text">
+                    <p>
+                        My fork of the Meshtastic® firmware isn't available yet, as changes to the PCB routing between revisions likely means breaking compatibility with existing boards.
+                        Once the design is close enough to "finished" for my liking and has proven to be reliable, I'll publish the fork! Watch this space for updates :)
+                    </p>
                 </span>
             </div>
 
@@ -120,6 +193,18 @@
                         <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). Currently, the firmware only supports WiFi.</li>
                         <li>The on-board power switch originally present has been removed from version 2, as it's more than adequate to simply wire a switch in series with the board's power supply. Please make sure that you select a suitable switch for the task!</li>
                     </ul>
+                </span>
+            </div>
+
+            <div id="source">
+                <h2 class="body-header">Source</h2>
+                <span class="body-text">
+                    <p>
+                        Meshlet is (and always will be) open source! All of the KiCAD project files are readily available, and so will the firmware changes, as soon as the board is finished and properly tested.
+                    </p>
+                    <p>
+                        <a href="https://github.com/dj505/meshlet"><span class="attn-label">KiCAD Project</span></a>
+                    </p>
                 </span>
             </div>
         </div>
