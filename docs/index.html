@@ -179,6 +179,7 @@
             <div id="use-notes">
                 <h2 class="body-header">Usage</h2>
                 <span class="body-text">
+                    <h3>General Notes</h3>
                     <p>
                         There are a few things I think you should keep in mind when using Meshlet:
                     </p>
@@ -193,6 +194,31 @@
                         <li>WiFi and Bluetooth capabilities depend on whether you can get your hands on the Raspberry Pi Radio Module 2 (RMC20452T). Currently, the firmware only supports WiFi.</li>
                         <li>The on-board power switch originally present has been removed from version 2, as it's more than adequate to simply wire a switch in series with the board's power supply. Please make sure that you select a suitable switch for the task!</li>
                     </ul>
+                    <h3>App Configuration</h3>
+                    <p>
+                        For the board to work properly, you will need to adjust some settings within the app.
+                    </p>
+                    <ul>
+                        <li><strong>Device</strong>: Button or Buzzer GPIO = 22</li>
+                        <li><strong>Power</strong>: Battery INA_2XX i2c address = 0x42 (or 66)</li>
+                        <li><strong>External Notification</strong>: Output LED or Buzzer GPIO = 22</li>
+                        <li><strong>Telemetry</strong> (if desired):</li>
+                        <ul>
+                            <li><strong>Send Device Telemetry</strong>: ON</li>
+                            <li><strong>Environment metrics module</strong>: ON only if BME280 is present</li>
+                            <li><strong>Air quality metrics module</strong>: ON only if BME280 is present</li>
+                            <li><strong>Power metrics module</strong>: ON</li>
+                        </ul>
+                    </ul>
+                    <h3>Monitored Power Channels</h3>
+                    <p>
+                        There are three monitored power channels on the INA3221, the values for which can be displayed and broadcast over the mesh when power telemetry is enabled. The channels are as follows:
+                    </p>
+                    <ul>
+                        <li><strong>Ch. 1</strong>: Battery voltage. Negative current value = discharging, positive current value = charging.
+                        <li><strong>Ch. 2</strong>: External power input. Shared between USB power and the two solar/ext connectors. Useful to see if your solar panel is working as it should!
+                        <li><strong>Ch. 3</strong>: Regulated BQ25185 load output. This monitors the power draw from everything after the battery chip, including the microcontroller, LoRa radio, WiFi module, and any other peripherals attached.
+                    </ul>
                 </span>
             </div>
 
@@ -200,10 +226,10 @@
                 <h2 class="body-header">Source</h2>
                 <span class="body-text">
                     <p>
-                        Meshlet is (and always will be) open source! All of the KiCAD project files are readily available, and so will the firmware changes, as soon as the board is finished and properly tested.
+                        <a href="https://github.com/dj505/meshlet"><span class="attn-label">KiCAD Project</span></a>
                     </p>
                     <p>
-                        <a href="https://github.com/dj505/meshlet"><span class="attn-label">KiCAD Project</span></a>
+                        Meshlet is (and always will be) open source! All of the KiCAD project files are readily available, and so will the firmware changes, as soon as the board is finished and properly tested.
                     </p>
                 </span>
             </div>
