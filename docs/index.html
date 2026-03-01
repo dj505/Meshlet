@@ -14,6 +14,16 @@
         <meta name="theme-color" content="#61afef" />
         <meta name="viewport" content="width=device-width, initial-scale=0.5" />
         <script type="text/javascript" src="/script/incl-html.js"></script>
+        <script src="https://unpkg.com/swup@4"></script>
+        <script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+        <script>
+            const swup = new Swup({
+                plugins: [
+                    new SwupPreloadPlugin(),
+                    new SwupHeadPlugin({ awaitAssets: true })
+                ],
+            });
+        </script>
     </head>
 
     <body>
@@ -29,10 +39,28 @@
 
         <div class="content" id="top">
             <a href="https://5panel.dance">
-                <h1 align="center" class="topper-h1">5panel.dance</h1>
+                <h1 align="center" class="topper-h1 wavy">
+                    <span>5</span>
+                    <span>p</span>
+                    <span>a</span>
+                    <span>n</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>.</span>
+                    <span>d</span>
+                    <span>a</span>
+                    <span>n</span>
+                    <span>c</span>
+                    <span>e</span>
+                </h1>
             </a>
-            <h2 align="center">↙️↖️⏺️↗️↘️</h2>
-
+            <h2 align="center" class="topper-h2 wavy">
+                <span>↙️</span>
+                <span>↖️</span>
+                <span>⏺️</span>
+                <span>↗️</span>
+                <span>↘️</span>
+            </h2>
             <p align="center"><a href="https://github.com/dj505">GitHub</a> • <a href="https://youtube.com/dj505itg">YouTube</a> • <a href="https://bsky.app/profile/5panel.dance">BlueSky</a> • <a href="https://discord.com/invite/ctMByBy">Discord</a> • <a href="https://ko-fi.com/dj505piu">Ko-Fi</a></p>
 
             <br/>
